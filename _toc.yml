@@ -1,0 +1,42 @@
+- file: README
+
+- part: Introdução
+  chapters:
+    - file: introduction/contextualization
+    - file: introduction/problem_definition
+    - file: introduction/project_objectives
+    - file: introduction/presentation_of_the_manuscript
+
+- part: Fundamentos
+  chapters:
+    - file: fundamentals/artificial_neural_networks
+    - file: fundamentals/training
+    - file: fundamentals/multiple_layer_feedforward_networks
+    - file: fundamentals/recurring_networks
+    - file: fundamentals/cross_validation
+    - file: fundamentals/acoustics
+    - file: fundamentals/frequency_spectrum
+    - file: fundamentals/wrap
+    - file: fundamentals/sound_descriptors
+    - file: fundamentals/performance_measurement_metrics
+    - file: fundamentals/related_works
+    - file: fundamentals/sound_source_rating
+    - file: fundamentals/sound_source_separation
+
+- part: Metodologia
+  chapters:
+    - file: methodology/samples
+    - file: methodology/classification_based_on_descriptors
+    - file: methodology/multilayer_perceptron
+    - file: methodology/elman_network
+
+- part: Resultados
+  chapters:
+    - file: results/samples
+    - file: results/classification_based_on_descriptors
+    - file: results/multilayer_perceptron
+    - file: results/elman_network
+
+- part: Conclusões
+  chapters:
+    - file: conclusions/future_perspectives
