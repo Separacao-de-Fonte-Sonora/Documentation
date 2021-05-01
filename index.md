@@ -1,0 +1,1 @@
+# Separaração de Fonte Sonora Monofônica

@@ -1,2 +1,1 @@
 # Classificação Baseada em Descritores
-====================================================

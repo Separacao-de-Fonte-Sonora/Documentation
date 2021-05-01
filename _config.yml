@@ -4,6 +4,7 @@ title: Separaração de Fonte Sonora Monofônica
 author: Daniel Bauchspiess, Rodrigo Xavier
 copyright: "2021"
 logo: "" #TODO: Preencher Logo
+exclude_patterns: [README.md]
 
 #######################################################################################
 # Execution settings
@@ -17,7 +18,7 @@ execute:
 html:
   favicon: "" #TODO: Preencher favicon
   use_repository_button: true
-  use_issues_button: false
+  use_issues_button: true
   google_analytics_id: "" #TODO: Preencher para poder acompanhar acessos ao site
 
 #######################################################################################
@@ -29,7 +30,7 @@ latex:
 #######################################################################################
 # Launch button settings
 launch_buttons:
-  notebook_interface: "classic"
+  notebook_interface: "jupyterlab"
 
 repository:
   url          : https://github.com/UnBeethoven/Separacao-de-Fonte-Sonora
