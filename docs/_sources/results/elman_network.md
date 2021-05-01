@@ -1,1 +1,0 @@
-# Rede De Elman
