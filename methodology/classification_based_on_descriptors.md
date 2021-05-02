@@ -1,1 +1,0 @@
-# Classificação Baseada em Descritores

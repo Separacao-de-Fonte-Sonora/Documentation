@@ -1,1 +1,0 @@
-# Descritores Sonoros

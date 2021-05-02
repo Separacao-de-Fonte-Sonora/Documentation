@@ -3,7 +3,7 @@
 title: ""
 author: Daniel Bauchspiess, Rodrigo Xavier
 copyright: "2021"
-logo: "static/img/logo.png"
+logo: "_static/img/logo.png"
 exclude_patterns: [README.md]
 
 #######################################################################################
@@ -16,10 +16,11 @@ execute:
 #######################################################################################
 # HTML-specific settings
 html:
-  favicon: "" #TODO: Preencher favicon
+  favicon: "_static/img/chip.png"
   use_repository_button: true
   use_issues_button: true
   google_analytics_id: "" #TODO: Preencher para poder acompanhar acessos ao site
+  extra_navbar: ""
 
 #######################################################################################
 # LaTeX-specific settings
@@ -33,6 +34,7 @@ latex:
 # Launch button settings
 launch_buttons:
   notebook_interface: "jupyterlab"
+  colab_url: "https://colab.research.google.com"
 
 repository:
   url          : https://github.com/UnBeethoven/Separacao-de-Fonte-Sonora
