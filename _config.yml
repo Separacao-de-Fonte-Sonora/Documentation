@@ -1,9 +1,9 @@
 #######################################################################################
 # Book settings
-title: Separaração de Fonte Sonora Monofônica
+title: ""
 author: Daniel Bauchspiess, Rodrigo Xavier
 copyright: "2021"
-logo: "" #TODO: Preencher Logo
+logo: "static/img/logo.png"
 exclude_patterns: [README.md]
 
 #######################################################################################
@@ -24,8 +24,10 @@ html:
 #######################################################################################
 # LaTeX-specific settings
 latex:
-  latex_documents:
-    targetname: book.tex
+  latex_engine: pdflatex
+  use_jupyterbook_latex: true
+#  latex_documents:
+#    targetname: book.tex
 
 #######################################################################################
 # Launch button settings
