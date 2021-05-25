@@ -16,6 +16,8 @@ Este projeto é voltado ao problema da classificação e da separação de fonte
 > 
 > Redes Neurais, Multilayer Perceptron, rede de Elman, LSTM, Música, Espectro de frequências, Descritores sonoros, Classificação de fonte sonora, Separação de fonte sonora, MATLAB, Descritores sonoros 
 
+:::{important} Repositório do projeto [Separação de Fonte Sonora Monofônica](https://github.com/minibauchspiess/Separacao-de-Fonte-Sonora)
+:::
 
 :::{admonition} Referenciar o Trabalho
 Para referenciar este trabalho, você pode utilizar o seguinte `bibtex`:

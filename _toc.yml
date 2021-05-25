@@ -9,9 +9,9 @@
     - file: results/artificial_samples
     - file: results/instrumental_samples
 
-- part: Conclusões
-  chapters:
-    - file: conclusions/future_perspectives
+# - part: Conclusões
+#   chapters:
+#     - file: conclusions/future_perspectives
 
 - part: Recursos
   chapters:
