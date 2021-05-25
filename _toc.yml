@@ -3,25 +3,10 @@
 - part: Fundamentos
   chapters:
     - file: fundamentals/artificial_neural_networks
-    - file: fundamentals/training
-    - file: fundamentals/multiple_layer_feedforward_networks
-    - file: fundamentals/recurring_networks
-    - file: fundamentals/cross_validation
-    - file: fundamentals/acoustics
-    - file: fundamentals/frequency_spectrum
-    - file: fundamentals/wrap
-    - file: fundamentals/sound_descriptors
-    - file: fundamentals/performance_measurement_metrics
-    - file: fundamentals/related_works
-    - file: fundamentals/sound_source_rating
-    - file: fundamentals/sound_source_separation
 
 - part: Resultados
   chapters:
     - file: results/samples
-    - file: results/classification_based_on_descriptors
-    - file: results/multilayer_perceptron
-    - file: results/elman_network
 
 - part: Conclusões
   chapters:

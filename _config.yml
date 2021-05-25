@@ -32,8 +32,8 @@ bibtex_bibfiles:
 latex:
   latex_engine: pdflatex
   use_jupyterbook_latex: true
-  latex_documents:
-    targetname: book.tex
+  # latex_documents:
+  #   targetname: book.tex
 
 #######################################################################################
 # Launch button settings

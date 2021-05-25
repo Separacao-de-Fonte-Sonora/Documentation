@@ -1,1 +1,0 @@
-# Espectro de Frequências
