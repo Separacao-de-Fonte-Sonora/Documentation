@@ -50,10 +50,12 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="shortcut icon" href="../_static/chip.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Treinamento" href="training.html" />
+    <link rel="next" title="Samples" href="../results/samples.html" />
     <link rel="prev" title="Separaração de Fonte Sonora Monofônica" href="../index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -100,66 +102,6 @@
    Redes Neurais Artificiais
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="training.html">
-   Treinamento
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="multiple_layer_feedforward_networks.html">
-   Redes Multiple-Layer Feedforward
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="recurring_networks.html">
-   Redes Recorrentes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="cross_validation.html">
-   Validação Cruzada
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="acoustics.html">
-   Acústica
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="frequency_spectrum.html">
-   Espectro de Frequências
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrap.html">
-   Envoltória
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="sound_descriptors.html">
-   Descritores Sonoros
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="performance_measurement_metrics.html">
-   Métricas de Avaliação de Desempenho
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="related_works.html">
-   Trabalhos Relacionados
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="sound_source_rating.html">
-   Classificação de Fonte Sonora
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="sound_source_separation.html">
-   Separação de Fonte Sonora
-  </a>
- </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -170,21 +112,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../results/samples.html">
    Samples
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../results/classification_based_on_descriptors.html">
-   Classificação Baseada em Descritores
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../results/multilayer_perceptron.html">
-   Multilayer Perceptron
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../results/elman_network.html">
-   Rede De Elman
   </a>
  </li>
 </ul>
@@ -208,7 +135,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../references.html">
-   Bibliografia
+   Referências
   </a>
  </li>
 </ul>
@@ -289,6 +216,19 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#redes-multiple-layer-feedforward">
+   Redes multiple-layer feedforward
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -299,13 +239,32 @@
                 
   <div class="section" id="redes-neurais-artificiais">
 <h1>Redes Neurais Artificiais<a class="headerlink" href="#redes-neurais-artificiais" title="Permalink to this headline">¶</a></h1>
-<p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-”Redes neurais artificiais são modelos computacionais inspirados pelo sistema nervoso de seres vivos. Elas possuem a habilidade de adquirir e manter conhecimento (baseadas em informação) e podem ser definidas como um conjunto de unidades processadoras,representadas por neurônios artificiais, interligadas por muitas interconexões.” 
-</p>
+<p>”Redes neurais artificiais são modelos computacionais inspirados pelo sistema nervoso de seres vivos. Elas possuem a habilidade de adquirir e manter conhecimento (baseadas em informação) e podem ser definidas como um conjunto de unidades processadoras,representadas por neurônios artificiais, interligadas por muitas interconexões.” <span id="id1">[<a class="reference internal" href="../references.html#id11"><span>NdSHSAF+17</span></a>]</span></p>
 <div class="figure align-default" id="directive-fig">
 <img alt="../_images/Neurônio.png" src="../_images/Neurônio.png" />
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Implementação do modelo de neurônio proposto por McCulloch e Pitts</span><a class="headerlink" href="#directive-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Implementação do modelo de neurônio proposto por McCulloch e Pitts <span id="id2">[<a class="reference internal" href="../references.html#id42"><span>MP43</span></a>]</span></span><a class="headerlink" href="#directive-fig" title="Permalink to this image">¶</a></p>
+</div>
+<p>Neste modelo, destaca-se os seguintes elementos:</p>
+<ul class="simple">
+<li><p>Sinal de entrada do neurônio, representado pelo vetor <span class="math notranslate nohighlight">\({x_1,x_2,...,x_n}\)</span>.</p></li>
+<li><p>Pesos associados a cada entrada, representados pelo vetor <span class="math notranslate nohighlight">\({w_1,w_2,...,w_n}\)</span>.</p></li>
+<li><p>Agregador linear, representado pelo símbolo do somatório <span class="math notranslate nohighlight">\(\sum\)</span>.</p></li>
+<li><p>Bias, representado pelo símbolo <span class="math notranslate nohighlight">\(\theta\)</span>.</p></li>
+<li><p>Potencial de ativação, representado por <span class="math notranslate nohighlight">\(u\)</span>.</p></li>
+<li><p>Função de ativação, representado por <span class="math notranslate nohighlight">\(g(·)\)</span>.</p></li>
+<li><p>Sinal de saída, representado por <span class="math notranslate nohighlight">\(y\)</span>.</p></li>
+</ul>
+<p>E é regido pelas equações <a class="reference internal" href="#equation-neuron1">(1)</a> e <a class="reference internal" href="#equation-neuron2">(2)</a></p>
+<div class="math notranslate nohighlight" id="equation-neuron1">
+<span class="eqno">(1)<a class="headerlink" href="#equation-neuron1" title="Permalink to this equation">¶</a></span>\[
+    u = \sum_1^n w_ix_i - \theta
+\]</div>
+<div class="math notranslate nohighlight" id="equation-neuron2">
+<span class="eqno">(2)<a class="headerlink" href="#equation-neuron2" title="Permalink to this equation">¶</a></span>\[
+    y = g(u)
+\]</div>
+<div class="section" id="redes-multiple-layer-feedforward">
+<h2>Redes multiple-layer feedforward<a class="headerlink" href="#redes-multiple-layer-feedforward" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -335,7 +294,7 @@
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="../index.html" title="previous page">Separaração de Fonte Sonora Monofônica</a>
-    <a class='right-next' id="next-link" href="training.html" title="next page">Treinamento</a>
+    <a class='right-next' id="next-link" href="../results/samples.html" title="next page">Samples</a>
 
         </div>
         
