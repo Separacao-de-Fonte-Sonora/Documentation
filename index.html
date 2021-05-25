@@ -53,7 +53,7 @@
     <link rel="shortcut icon" href="_static/chip.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Samples" href="results/samples.html" />
+    <link rel="next" title="Redes Neurais Artificiais" href="fundamentals/artificial_neural_networks.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -85,6 +85,78 @@
  <li class="toctree-l1 current">
   <a class="reference internal" href="#">
    Separaração de Fonte Sonora Monofônica
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Fundamentos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="fundamentals/artificial_neural_networks.html">
+   Redes Neurais Artificiais
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fundamentals/training.html">
+   Treinamento
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fundamentals/multiple_layer_feedforward_networks.html">
+   Redes Multiple-Layer Feedforward
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fundamentals/recurring_networks.html">
+   Redes Recorrentes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fundamentals/cross_validation.html">
+   Validação Cruzada
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fundamentals/acoustics.html">
+   Acústica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fundamentals/frequency_spectrum.html">
+   Espectro de Frequências
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fundamentals/wrap.html">
+   Envoltória
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fundamentals/sound_descriptors.html">
+   Descritores Sonoros
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fundamentals/performance_measurement_metrics.html">
+   Métricas de Avaliação de Desempenho
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fundamentals/related_works.html">
+   Trabalhos Relacionados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fundamentals/sound_source_rating.html">
+   Classificação de Fonte Sonora
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fundamentals/sound_source_separation.html">
+   Separação de Fonte Sonora
   </a>
  </li>
 </ul>
@@ -124,6 +196,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="conclusions/future_perspectives.html">
    Perspectivas Futuras
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Recursos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="references.html">
+   Bibliografia
   </a>
  </li>
 </ul>
@@ -204,6 +288,37 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Separaração de Fonte Sonora Monofônica
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definicao-do-problema">
+     Definição do Problema
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objetivo-geral">
+     Objetivo Geral
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+  </a>
+  <ul class="visible nav section-nav flex-column">
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -214,10 +329,30 @@
                 
   <div class="section" id="separaracao-de-fonte-sonora-monofonica">
 <h1>Separaração de Fonte Sonora Monofônica<a class="headerlink" href="#separaracao-de-fonte-sonora-monofonica" title="Permalink to this headline">¶</a></h1>
-<p>Neste projeto, serão desenvolvidas redes neurais artificiais capazes de receber um sinal de áudio e classificar ou separar as fontes sonoras detectadas no mesmo. A entrada da rede pode ser dada pelos descritores do sinal sonoro, ou o sinal sonoro puro. Até o presente momento, foram desenvolvidas duas redes neurais (uma Multilayer Perceptron e uma rede de Elman) que recebem os descritores do sinal de áudio e realizam a classificação do instrumento detectado, obtendo acurácias acima de 95%.</p>
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Dentro de uma peça de música, existem muitas informações que podem ser extraídas e que seres humanos reconhecem de forma natural. Informações mais locais como a força ou o ritmo da música, ou informações mais gerais como o gênero musical, os instrumentos tocados, dentre outras. A capacidade de extrair essas informações de forma automática pode abrir muitas portas na área acadêmica e comercial, possibilitando estudos aprofundados de cada peça, seleção de músicas semelhantes, sistemas que respondem ao andamento da música e assim por diante.
+</p>
+<div class="section" id="definicao-do-problema">
+<h2>Definição do Problema<a class="headerlink" href="#definicao-do-problema" title="Permalink to this headline">¶</a></h2>
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Dentre os ramos de pesquisa de MIR (Music Information Retrieval), existe a área de identificação e separação de fonte sonora. Um problema que costuma ser citado nessas áreas é o da “festa de cocktail”: em uma sala cheia de pessoas conversando, o ser humano é capaz de focar em uma conversa, ignorando o ruído do ambiente. Para o caso de sinais musicais o problema da separação é diferente, não havendo uma única fonte de interesse a ser diferenciada do ruído de fundo, mas uma variedade de tons e timbres tocando de forma coordenada. Considerando estas situações, é trazido o problema da classificação e/ou separação de fontes sonoras de forma automática.
+</p>
+</div>
+<div class="section" id="objetivo-geral">
+<h2>Objetivo Geral<a class="headerlink" href="#objetivo-geral" title="Permalink to this headline">¶</a></h2>
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Este projeto é voltado ao problema da classificação e da separação de fontes sonoras musicais. Cada um desses será abordado separadamente. O objetivo é comparar o desempenho de diferentes arquiteturas de redes neurais nos desafios propostos, em especial redes neurais recorrentes, e explorar as limitações de cada uma em seu contexto.
+</p>
+</div>
+</div>
+<div class="section" id="id1">
+<h1><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <blockquote>
-<div><p>Palavras Chave</p>
-<p>Redes Neurais, Música, Separação de fonte sonora, MATLAB, Descritores sonoros</p>
+<div><p><code class="docutils literal notranslate"><span class="pre">Palavras</span> <span class="pre">Chave</span></code></p>
+<p>Redes Neurais, Multilayer Perceptron, rede de Elman, LSTM, Música, Espectro de frequências, Descritores sonoros, Classificação de fonte sonora, Separação de fonte sonora, MATLAB, Descritores sonoros</p>
 </div></blockquote>
 <div class="admonition-referenciar-o-trabalho admonition">
 <p class="admonition-title">Referenciar o Trabalho</p>
@@ -231,6 +366,10 @@
 <span class="p">}</span>
 </pre></div>
 </div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
 </div>
@@ -263,7 +402,7 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='right-next' id="next-link" href="results/samples.html" title="next page">Samples</a>
+    <a class='right-next' id="next-link" href="fundamentals/artificial_neural_networks.html" title="next page">Redes Neurais Artificiais</a>
 
         </div>
         
