@@ -55,7 +55,7 @@
     <link rel="shortcut icon" href="../_static/chip.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Samples" href="../results/samples.html" />
+    <link rel="next" title="Amostras Sintéticas" href="../results/artificial_samples.html" />
     <link rel="prev" title="Separaração de Fonte Sonora Monofônica" href="../index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -110,8 +110,13 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../results/samples.html">
-   Samples
+  <a class="reference internal" href="../results/artificial_samples.html">
+   Amostras Sintéticas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../results/instrumental_samples.html">
+   Amostras instrumentais
   </a>
  </li>
 </ul>
@@ -226,6 +231,21 @@
    Redes multiple-layer feedforward
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#redes-recorrentes">
+   Redes recorrentes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#redes-de-elman">
+   Redes de Elman
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#long-short-term-memory-lstm">
+   Long Short-Term Memory (LSTM)
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -240,9 +260,9 @@
   <div class="section" id="redes-neurais-artificiais">
 <h1>Redes Neurais Artificiais<a class="headerlink" href="#redes-neurais-artificiais" title="Permalink to this headline">¶</a></h1>
 <p>”Redes neurais artificiais são modelos computacionais inspirados pelo sistema nervoso de seres vivos. Elas possuem a habilidade de adquirir e manter conhecimento (baseadas em informação) e podem ser definidas como um conjunto de unidades processadoras,representadas por neurônios artificiais, interligadas por muitas interconexões.” <span id="id1">[<a class="reference internal" href="../references.html#id11"><span>NdSHSAF+17</span></a>]</span></p>
-<div class="figure align-default" id="directive-fig">
+<div class="figure align-default" id="neuron">
 <img alt="../_images/Neurônio.png" src="../_images/Neurônio.png" />
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Implementação do modelo de neurônio proposto por McCulloch e Pitts <span id="id2">[<a class="reference internal" href="../references.html#id42"><span>MP43</span></a>]</span></span><a class="headerlink" href="#directive-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Implementação do modelo de neurônio proposto por McCulloch e Pitts <span id="id2">[<a class="reference internal" href="../references.html#id42"><span>MP43</span></a>]</span>.</span><a class="headerlink" href="#neuron" title="Permalink to this image">¶</a></p>
 </div>
 <p>Neste modelo, destaca-se os seguintes elementos:</p>
 <ul class="simple">
@@ -265,6 +285,34 @@
 \]</div>
 <div class="section" id="redes-multiple-layer-feedforward">
 <h2>Redes multiple-layer feedforward<a class="headerlink" href="#redes-multiple-layer-feedforward" title="Permalink to this headline">¶</a></h2>
+<p>Um modelo neuronal moderno, derivado do trabalho de McCulloch e Pitts <span id="id3">[<a class="reference internal" href="../references.html#id42"><span>MP43</span></a>]</span> é o multiple-layer feedforward. Ele possui uma ou mais camadas intermediárias (além das camadas de entrada e saída), e o fluxo da informação sempre segue uma mesma direção, da entrada até a saída <span id="id4">[<a class="reference internal" href="../references.html#id11"><span>NdSHSAF+17</span></a>]</span>. Isto significa que as saídas dos neurônios de uma camada conectam-se apenas com os neurônios de camadas posteriores, mais próximas à camadade saída, nunca com a própria camada ou com camadas anteriores.</p>
+<div class="figure align-default" id="multilayer-feedforward">
+<img alt="../_images/multi-layer_feedforward.png" src="../_images/multi-layer_feedforward.png" />
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Representação de uma rede multiple-layer feedforward.</span><a class="headerlink" href="#multilayer-feedforward" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="redes-recorrentes">
+<h2>Redes recorrentes<a class="headerlink" href="#redes-recorrentes" title="Permalink to this headline">¶</a></h2>
+<p>Redes recorrentes são caracterizadas pelo fato de que a saída de um ou mais neurônios serve de retroalimentação para outros neurônios <span id="id5">[<a class="reference internal" href="../references.html#id11"><span>NdSHSAF+17</span></a>]</span>, servindo de entrada de neurônios na mesma camada ou em camadas anteriores, fazendo com que o fluxo de informação não seja unidirecional.</p>
+<div class="figure align-default" id="recorrente">
+<img alt="../_images/recorrente.png" src="../_images/recorrente.png" />
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Representação de uma rede recorrente.</span><a class="headerlink" href="#recorrente" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="redes-de-elman">
+<h2>Redes de Elman<a class="headerlink" href="#redes-de-elman" title="Permalink to this headline">¶</a></h2>
+<p>Proposta por Elman em 1990 <span id="id6">[<a class="reference internal" href="../references.html#id44"><span>Elm90</span></a>]</span>, a rede que leva seu nome é um tipo específico de rede recorrente. Ela é composta pela camada de entrada, uma camada intermediária e a camada de saída. Cada neurônio da camada intermediária é retroalimentada a todos os outros neurônios da mesmacamada com uma unidade de atraso (representado pelas unidades <span class="math notranslate nohighlight">\(z^{−1}\)</span>), permitindo que a rede reconheça padrões temporais</p>
+<div class="figure align-default" id="elman">
+<img alt="../_images/elman2.png" src="../_images/elman2.png" />
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Representação de uma rede de Elman, adaptada de <span id="id7">[<a class="reference internal" href="../references.html#id45"><span>RCW+18</span></a>]</span>.</span><a class="headerlink" href="#elman" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="long-short-term-memory-lstm">
+<h2>Long Short-Term Memory (LSTM)<a class="headerlink" href="#long-short-term-memory-lstm" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="lstm">
+<img alt="../_images/LSTM.png" src="../_images/LSTM.png" />
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Representação de uma célula de memória utilizada na arquitetura LSTM. Adaptada de <span id="id8">[<a class="reference internal" href="../references.html#id37"><span>KS19</span></a>]</span></span><a class="headerlink" href="#lstm" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 </div>
 
@@ -294,7 +342,7 @@
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="../index.html" title="previous page">Separaração de Fonte Sonora Monofônica</a>
-    <a class='right-next' id="next-link" href="../results/samples.html" title="next page">Samples</a>
+    <a class='right-next' id="next-link" href="../results/artificial_samples.html" title="next page">Amostras Sintéticas</a>
 
         </div>
         
