@@ -56,7 +56,6 @@ Representação de uma rede recorrente.
 
 Proposta por Elman em 1990 {cite}`elman1990finding`, a rede que leva seu nome é um tipo específico de rede recorrente. Ela é composta pela camada de entrada, uma camada intermediária e a camada de saída. Cada neurônio da camada intermediária é retroalimentada a todos os outros neurônios da mesmacamada com uma unidade de atraso (representado pelas unidades $z^{−1}$), permitindo que a rede reconheça padrões temporais
 
-
 ```{figure} ../_static/img/monografia/fundamentos/elman2.png
 ---
 name: elman
@@ -66,8 +65,7 @@ Representação de uma rede de Elman, adaptada de {cite}`ElmanFig`.
 
 ## Long Short-Term Memory (LSTM)
 
-
-
+ A ideia por trás da arquitetura da LSTM é uma célula de memória capaz manter seu estado ao longo do tempo, com portas que regulam a entrada e saída de informação. Nela, pode-se ver as três portas que a compõem: de esquecimento, de escrita e de saída. A porta de esquecimento recebe a entrada atual e informações de memória e decide que informação será retida e qual será esquecida. A porta de escrita armazena a informação na memória (a depender da saída da porta de esquecimento e da entrada atual da célula) e a porta de saída decide qual será a saída da célula, levando em consideração o estado atual da célula (sua memória) e a entrada atual na mesma {cite}`depEEGlstm`. 
 
 ```{figure} ../_static/img/monografia/fundamentos/LSTM.png
 ---
@@ -75,3 +73,4 @@ name: lstm
 ---
 Representação de uma célula de memória utilizada na arquitetura LSTM. Adaptada de {cite}`depEEGlstm`
 ```
+
