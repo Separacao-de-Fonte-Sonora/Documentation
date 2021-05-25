@@ -4,9 +4,9 @@
 
 ```{figure} ../_static/img/monografia/fundamentos/Neurônio.png
 ---
-name: directive-fig
+name: neuron
 ---
-Implementação do modelo de neurônio proposto por McCulloch e Pitts {cite}`mcculloch1943logical`
+Implementação do modelo de neurônio proposto por McCulloch e Pitts {cite}`mcculloch1943logical`.
 ```
 
 Neste modelo, destaca-se os seguintes elementos:
@@ -31,3 +31,47 @@ $$
 $$ (neuron2)
 
 ## Redes multiple-layer feedforward
+
+Um modelo neuronal moderno, derivado do trabalho de McCulloch e Pitts {cite}`mcculloch1943logical` é o multiple-layer feedforward. Ele possui uma ou mais camadas intermediárias (além das camadas de entrada e saída), e o fluxo da informação sempre segue uma mesma direção, da entrada até a saída {cite}`ivannunes2017ann`. Isto significa que as saídas dos neurônios de uma camada conectam-se apenas com os neurônios de camadas posteriores, mais próximas à camadade saída, nunca com a própria camada ou com camadas anteriores.
+
+```{figure} ../_static/img/monografia/fundamentos/multi-layer_feedforward.png
+---
+name: multilayer_feedforward
+---
+Representação de uma rede multiple-layer feedforward.
+```
+
+## Redes recorrentes
+
+Redes recorrentes são caracterizadas pelo fato de que a saída de um ou mais neurônios serve de retroalimentação para outros neurônios {cite}`ivannunes2017ann`, servindo de entrada de neurônios na mesma camada ou em camadas anteriores, fazendo com que o fluxo de informação não seja unidirecional.
+
+```{figure} ../_static/img/monografia/fundamentos/recorrente.png
+---
+name: recorrente
+---
+Representação de uma rede recorrente.
+```
+
+## Redes de Elman
+
+Proposta por Elman em 1990 {cite}`elman1990finding`, a rede que leva seu nome é um tipo específico de rede recorrente. Ela é composta pela camada de entrada, uma camada intermediária e a camada de saída. Cada neurônio da camada intermediária é retroalimentada a todos os outros neurônios da mesmacamada com uma unidade de atraso (representado pelas unidades $z^{−1}$), permitindo que a rede reconheça padrões temporais
+
+
+```{figure} ../_static/img/monografia/fundamentos/elman2.png
+---
+name: elman
+---
+Representação de uma rede de Elman, adaptada de {cite}`ElmanFig`.
+```
+
+## Long Short-Term Memory (LSTM)
+
+
+
+
+```{figure} ../_static/img/monografia/fundamentos/LSTM.png
+---
+name: lstm
+---
+Representação de uma célula de memória utilizada na arquitetura LSTM. Adaptada de {cite}`depEEGlstm`
+```

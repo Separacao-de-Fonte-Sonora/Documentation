@@ -6,7 +6,8 @@
 
 - part: Resultados
   chapters:
-    - file: results/samples
+    - file: results/artificial_samples
+    - file: results/instrumental_samples
 
 - part: Conclusões
   chapters:
